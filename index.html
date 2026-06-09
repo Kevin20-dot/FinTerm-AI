@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FinTerms AI - Personal Finance Learning & Investment Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🤖 FinTerms AI</h1>
+
+       <h3>📈 Learn Finance Smarter</h3>
+
+<div class="hero">
+
+    <h2>🚀 Your AI Finance Companion</h2>
+
+    <p>
+        Learn Finance • Plan Investments • Build Wealth
+    </p>
+
+</div> 
+
+        <!-- Dashboard -->
+
+        <h2>📊 Financial Overview</h2>
+
+<p style="margin-bottom:20px;color:#94a3b8;">
+Track your investments, goals, risk profile and projected wealth.
+</p>
+
+        <div class="dashboard">
+
+    <div class="card">
+        <h3>📈 Monthly SIP</h3>
+        <p id="dashSip">₹0</p>
+    </div>
+
+    <div class="card">
+        <h3>🎯 Goals</h3>
+        <p id="dashGoal">0</p>
+    </div>
+
+   
+        <div class="card">
+    <h3>⚖ Risk</h3>
+    <p id="dashRisk">Not Set</p>
+</div>
+
+<div class="card">
+    <h3>💰 Wealth</h3>
+    <p id="dashWealth">₹0</p>
+</div>    
+<div class="card">
+    <h3>⭐ Finance Score</h3>
+    <p id="financeScore">0</p>
+</div>
+
+        </div>
+<div class="score-section">
+
+    <h3>📊 Finance Health</h3>
+
+    <div class="progress-bar">
+        <div id="scoreBar" class="progress-fill"></div>
+    </div>
+
+    <p id="scoreStatus">Needs Improvement</p>
+
+</div>
+        <hr>
+
+        <!-- Finance Dictionary -->
+
+        <h2>📚 Finance Q&A</h2>
+
+        <input
+            type="text"
+            id="question"
+            placeholder="Ask about SIP, NAV, CAGR, ETF..."
+            onkeypress="if(event.key==='Enter') getAnswer()">
+
+        <br><br>
+
+        <button onclick="getAnswer()">
+            Ask AI
+        </button>
+
+        <div id="answer">
+
+            <h3>👋 Welcome</h3>
+
+            <p>Ask a finance question like:</p>
+
+            <ul>
+                <li>What is SIP?</li>
+                <li>What is NAV?</li>
+                <li>What is ETF?</li>
+                <li>What is CAGR?</li>
+                <li>What is Inflation?</li>
+            </ul>
+
+        </div>
+
+        <hr>
+
+        <!-- SIP Calculator -->
+
+        <h2>📈 SIP Calculator</h2>
+
+        <input
+            type="number"
+            id="sipAmount"
+            placeholder="Monthly SIP Amount">
+
+        <br><br>
+
+        <input
+            type="number"
+            id="sipYears"
+            placeholder="Investment Years">
+
+        <br><br>
+
+        <button onclick="calculateSIP()">
+            Calculate SIP
+        </button>
+
+        <div id="sipResult"></div>
+
+        <hr>
+
+        <!-- Risk Profiler -->
+
+        <h2>🎯 Risk Profiler</h2>
+
+        <select id="riskProfile">
+
+            <option value="">
+                Select Risk Appetite
+            </option>
+
+            <option value="low">
+                Low Risk
+            </option>
+
+            <option value="medium">
+                Medium Risk
+            </option>
+
+            <option value="high">
+                High Risk
+            </option>
+
+        </select>
+
+        <br><br>
+
+        <button onclick="showRiskProfile()">
+            Check Profile
+        </button>
+
+        <div id="riskResult"></div>
+
+        <hr>
+
+        <!-- Finance Agent -->
+
+        <h2>🤖 Finance Agent</h2>
+
+        <input
+            type="number"
+            id="age"
+            placeholder="Enter Your Age">
+
+        <br><br>
+
+        <input
+            type="number"
+            id="investment"
+            placeholder="Monthly Investment Amount">
+
+        <br><br>
+
+        <select id="agentRisk">
+
+            <option value="">
+                Select Risk Appetite
+            </option>
+
+            <option value="low">
+                Low Risk
+            </option>
+
+            <option value="medium">
+                Medium Risk
+            </option>
+
+            <option value="high">
+                High Risk
+            </option>
+
+        </select>
+
+        <br><br>
+
+        <button onclick="runAgent()">
+            Get Recommendation
+        </button>
+
+        <div id="agentResult"></div>
+
+        <hr>
+
+        <!-- Goal Planner -->
+
+        <h2>🎯 Goal Planner</h2>
+
+        <input
+            type="text"
+            id="goalName"
+            placeholder="Goal (Car, House, Retirement)">
+
+        <br><br>
+
+        <input
+            type="number"
+            id="goalAmount"
+            placeholder="Target Amount">
+
+        <br><br>
+
+        <input
+            type="number"
+            id="goalYears"
+            placeholder="Years to Goal">
+
+        <br><br>
+
+        <button onclick="calculateGoal()">
+            Calculate Required SIP
+        </button>
+
+        <div id="goalResult"></div>
+
+        <hr>
+
+        <p>
+            Built by Kevin Biju | Microsoft Agents League Hackathon 2026
+        </p>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
